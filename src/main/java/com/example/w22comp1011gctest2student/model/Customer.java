@@ -47,5 +47,11 @@ public class Customer {
         // Adding the double for saved sum
         return purchases.stream().reduce(0.00, (partialTotal, product) -> partialTotal + (product.getRegularPrice() - product.getSalePrice()), Double::sum);
     }
+
+    // Function to check if customer has saved more than or equal to 5 dollars
+    public boolean hasSavedEqualOrMoreThan5() {
+        // Reusing previously written method and returning if more than equal to 5
+        return getTotalSavedAmount() >= 5;
+    }
 }
 
