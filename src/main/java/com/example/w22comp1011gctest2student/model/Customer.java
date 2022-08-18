@@ -31,5 +31,13 @@ public class Customer {
     public ArrayList<Product> getPurchases() {
         return purchases;
     }
+
+    // Function to get total of purchases
+    public double getTotalPurchases() {
+
+        // streaming over all products in purchases
+        // Summing the double for total sum
+        return purchases.stream().reduce(0.00, (partialTotal, product) -> partialTotal + product.getSalePrice(), Double::sum);
+    }
 }
 
