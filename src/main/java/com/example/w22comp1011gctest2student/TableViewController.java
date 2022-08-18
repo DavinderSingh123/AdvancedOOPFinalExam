@@ -6,6 +6,8 @@ import com.example.w22comp1011gctest2student.model.Customer;
 import com.example.w22comp1011gctest2student.model.Product;
 import com.example.w22comp1011gctest2student.parser.Parser;
 import javafx.beans.binding.Bindings;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -59,6 +61,7 @@ public class TableViewController implements Initializable {
     private ImageView imageView;
 
     private ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
+    private ObservableList<Product> purchaseObservableList = FXCollections.observableArrayList();
 
     @FXML
     private void top10Customers() {
@@ -86,6 +89,14 @@ public class TableViewController implements Initializable {
         customerObservableList.addAll(customerArrayList);
         tableView.setItems(customerObservableList);
         rowsInTableLabel.textProperty().bind(Bindings.size(customerObservableList).asString("Rows in table: %s"));
+        tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Customer>() {
+            @Override
+            public void changed(ObservableValue<? extends Customer> observableValue, Customer customer, Customer t1) {
+                purchaseObservableList.clear();
+                purchaseObservableList.addAll(t1.getPurchases());
+                purchaseListView.setItems(purchaseObservableList);
+            }
+        });
     }
 
     public ObservableList<Customer> getCustomerObservableList() {
