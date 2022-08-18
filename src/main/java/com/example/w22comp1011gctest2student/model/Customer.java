@@ -10,7 +10,7 @@ public class Customer {
     private int id;
     private String firstName;
     private String lastName;
-    private String phone;
+    private String phoneNumber;
     private ArrayList<Product> purchases;
 
     // Getter methods
@@ -26,8 +26,8 @@ public class Customer {
         return lastName;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public ArrayList<Product> getPurchases() {

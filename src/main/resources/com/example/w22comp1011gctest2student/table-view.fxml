@@ -23,11 +23,11 @@
                      <children>
                         <TableView fx:id="tableView" prefHeight="323.0" prefWidth="600.0">
                           <columns>
-                            <TableColumn fx:id="idColumn" prefWidth="61.0" styleClass="text" text="ID" />
-                            <TableColumn fx:id="firstNameColumn" prefWidth="130.0" styleClass="text" text="First Name" />
-                              <TableColumn fx:id="lastNameColumn" prefWidth="130.0" styleClass="text" text="Last Name" />
-                              <TableColumn fx:id="phoneColumn" prefWidth="130.0" styleClass="text" text="Phone" />
-                              <TableColumn fx:id="totalPurchaseColumn" prefWidth="120.0" styleClass="text" text="Total Purchases" />
+                            <TableColumn fx:id="idColumn" prefWidth="61.0" text="ID" />
+                            <TableColumn fx:id="firstNameColumn" prefWidth="130.0" text="First Name" />
+                              <TableColumn fx:id="lastNameColumn" prefWidth="130.0" text="Last Name" />
+                              <TableColumn fx:id="phoneColumn" prefWidth="130.0" text="Phone" />
+                              <TableColumn fx:id="totalPurchaseColumn" prefWidth="120.0" text="Total Purchases" />
                           </columns>
                         </TableView>
                         <Label fx:id="rowsInTableLabel" styleClass="text" text="Rows in table: " />
