@@ -68,7 +68,9 @@ public class TableViewController implements Initializable {
 
     @FXML
     private void customersSavedOver5() {
-        System.out.println("called method customersSavedOver5()");
+        customerObservableList.clear();
+        ArrayList<Customer> customerArrayList = Parser.getCustomersFromJsonFile();
+        customerObservableList.addAll(customerArrayList.stream().filter((customer -> customer.hasSavedEqualOrMoreThan5())).toList());
     }
 
     @FXML
