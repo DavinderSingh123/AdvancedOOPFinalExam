@@ -39,5 +39,13 @@ public class Customer {
         // Summing the double for total sum
         return purchases.stream().reduce(0.00, (partialTotal, product) -> partialTotal + product.getSalePrice(), Double::sum);
     }
+
+    // Function to get total saved amount
+    public double getTotalSavedAmount() {
+
+        // streaming over all products in purchases
+        // Adding the double for saved sum
+        return purchases.stream().reduce(0.00, (partialTotal, product) -> partialTotal + (product.getRegularPrice() - product.getSalePrice()), Double::sum);
+    }
 }
 
