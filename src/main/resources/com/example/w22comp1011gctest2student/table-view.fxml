@@ -12,25 +12,25 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.w22comp1011gctest2student.TableViewController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.w22comp1011gctest2student.TableViewController">
    <children>
-      <VBox alignment="CENTER" layoutX="22.0" layoutY="31.0" prefHeight="400.0" prefWidth="1000.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" layoutX="22.0" layoutY="31.0" prefHeight="400.0" prefWidth="1000.0" spacing="40.0" styleClass="darkBackground" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="header" text="Customers" />
+            <Label id="header" styleClass="text" text="Customers" />
             <HBox spacing="30.0">
                <children>
                   <VBox>
                      <children>
                         <TableView fx:id="tableView" prefHeight="323.0" prefWidth="600.0">
                           <columns>
-                            <TableColumn fx:id="idColumn" prefWidth="61.0" text="ID" />
-                            <TableColumn fx:id="firstNameColumn" prefWidth="130.0" text="First Name" />
-                              <TableColumn fx:id="lastNameColumn" prefWidth="130.0" text="Last Name" />
-                              <TableColumn fx:id="phoneColumn" prefWidth="130.0" text="Phone" />
-                              <TableColumn fx:id="totalPurchaseColumn" prefWidth="120.0" text="Total Purchases" />
+                            <TableColumn fx:id="idColumn" prefWidth="61.0" styleClass="text" text="ID" />
+                            <TableColumn fx:id="firstNameColumn" prefWidth="130.0" styleClass="text" text="First Name" />
+                              <TableColumn fx:id="lastNameColumn" prefWidth="130.0" styleClass="text" text="Last Name" />
+                              <TableColumn fx:id="phoneColumn" prefWidth="130.0" styleClass="text" text="Phone" />
+                              <TableColumn fx:id="totalPurchaseColumn" prefWidth="120.0" styleClass="text" text="Total Purchases" />
                           </columns>
                         </TableView>
-                        <Label fx:id="rowsInTableLabel" text="Rows in table: " />
+                        <Label fx:id="rowsInTableLabel" styleClass="text" text="Rows in table: " />
                      </children>
                   </VBox>
                   <StackPane id="stackPane">
@@ -44,15 +44,15 @@
                <children>
                   <VBox>
                      <children>
-                        <Label text="Customer Purchases" />
+                        <Label styleClass="text" text="Customer Purchases" />
                         <ListView fx:id="purchaseListView" prefHeight="246.0" prefWidth="600.0" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER_LEFT" prefHeight="273.0" prefWidth="313.0" spacing="20.0">
                      <children>
-                        <Label fx:id="msrpLabel" text="Label" />
-                        <Label fx:id="saleLabel" text="Label" />
-                        <Label fx:id="savingsLabel" text="Label" />
+                        <Label fx:id="msrpLabel" styleClass="text" text="Label" />
+                        <Label fx:id="saleLabel" styleClass="text" text="Label" />
+                        <Label fx:id="savingsLabel" styleClass="text" text="Label" />
                      </children>
                   </VBox>
                </children>

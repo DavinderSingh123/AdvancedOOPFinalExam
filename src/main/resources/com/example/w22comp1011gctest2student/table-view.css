@@ -1,0 +1,7 @@
+.darkBackground {
+    -fx-background-color: #444;
+}
+
+.text {
+    -fx-text-fill: #FFD700;
+}
