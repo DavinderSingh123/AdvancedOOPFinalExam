@@ -5,6 +5,7 @@ package com.example.w22comp1011gctest2student;
 import com.example.w22comp1011gctest2student.model.Customer;
 import com.example.w22comp1011gctest2student.model.Product;
 import com.example.w22comp1011gctest2student.parser.Parser;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -84,6 +85,7 @@ public class TableViewController implements Initializable {
         totalPurchaseColumn.setCellValueFactory(new PropertyValueFactory<>("totalPurchases"));
         customerObservableList.addAll(customerArrayList);
         tableView.setItems(customerObservableList);
+        rowsInTableLabel.textProperty().bind(Bindings.size(customerObservableList).asString("Rows in table: %s"));
     }
 
     public ObservableList<Customer> getCustomerObservableList() {
