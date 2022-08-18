@@ -75,7 +75,9 @@ public class TableViewController implements Initializable {
 
     @FXML
     private void loadAllCustomers() {
-        System.out.println("called method loadAllCustomers");
+        customerObservableList.clear();
+        ArrayList<Customer> customerArrayList = Parser.getCustomersFromJsonFile();
+        customerObservableList.addAll(customerArrayList);
     }
 
     @Override
